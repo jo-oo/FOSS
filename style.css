@@ -1,0 +1,420 @@
+/*------GENERAL------*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Merriweather', serif; 
+}
+
+h1, h2, h3, footer, header {
+    font-family: 'Lato', sans-serif;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.2em;
+}
+
+p, li {
+    font-size: 0.8em;
+    line-height: 1.5em;
+}
+
+main {
+    background-color:rgba(148, 187, 211, 0.577);
+}
+
+/*tar bort grått innan footer i mobilversion*/
+main:nth-last-of-type(1) {
+    padding-bottom: 0;
+}   
+
+a {
+    color: black;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+.container {
+    width: 100%;
+    margin: auto;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/*------HEADER------*/
+header {
+    position:sticky;
+    top: 0;
+    background-color: lightgrey;
+    height: 12vh;
+}
+
+.site-header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-logo-container { 
+    display: flex;
+    width: 200px;
+    height: 3em;
+    padding-top: 1em;
+    justify-content: space-evenly;
+}
+
+.site-logo-container img { 
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin-left: 0.5em;
+    margin-right:0;
+}
+
+.site-logo-heading {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: auto;
+    margin-left:0.3em;
+    font-size: 1.5em;
+    color: black;
+    font-weight: bolder;
+}
+
+.main-navigation { 
+    display: flex;
+    flex-direction: column;
+    width: 2.5em;
+    height: 2.5em;
+    padding-top: 0.6em;
+    margin-right: 2em;
+}
+
+.hooverDiv:hover + .hide {
+    display: block;
+}
+
+.main-navigation img { 
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0.2em;
+    border: 1px solid darkgrey;
+    padding: 3px;
+    border-radius: 5px; 
+}
+
+.main-navigation img:hover {
+    background-color: white;
+}
+
+.links {
+    padding: 0.25em 0 em 0.25em 0em;
+}
+
+.hide {
+    display: none;
+}
+
+.main-navigation-widescreen {
+        display: none;
+}    
+
+
+/*------MAIN------*/
+/*---Hero---*/
+.hero {
+    height: 300px;
+    width: 100%;
+    background-image: url("img/welcome-img.jpg"); 
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*försöker fylla hela elementet*/
+    background-size: cover;
+    /*bilder vill generellt repeteras om de inte får plats. Därför sätts "repetera ej bilder".*/
+    background-repeat: no-repeat; 
+    padding-bottom: 0;
+}
+
+.hero h1{
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-header {
+    display: inline;
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+
+/*---Main-Articles---*/
+article {
+    background-color: white;
+}
+
+.main-article {
+    margin-bottom: 0.5em;
+    padding: 1.2em 1.8em 1.2em 1.8em;
+}
+
+.main-article:nth-child(even){
+    flex-direction: row-reverse;
+}
+
+
+/*---Logos i main-articles---*/
+.article-logo-wrapper{
+    width: 80%;
+    height: 4em;
+    display:flex;
+    padding-top: 0.8em;
+    justify-content: space-between;
+}
+.article-logo {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: 0;
+}
+
+.article-logo-heading {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: auto;
+    font-size: 170%;
+    padding-bottom: 0.4em;
+}
+
+
+/*---Related-Articles---*/
+.heading-related-articles h2 {
+    text-align: center;
+    font-size: 2.2em;
+}
+
+.related-article {
+    margin-top: 0.5em;
+    padding: 1.2em 1.8em 1.2em 1.8em;
+}
+
+.related-image-wrapper {
+    margin-left: auto;
+    margin-right: auto; 
+    width: 11em;
+    height: 11em;
+} 
+
+.related-image {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}  
+
+.related-text h3 {
+    Width: 50%;
+    margin:auto;
+    margin-top: 0.5em;
+    text-align: center;
+}    
+
+#game-pad-image {
+    padding-top: 1em;
+}
+  
+
+/*------FOOTER------*/
+footer {
+    text-align: center;
+    height: 4em;
+}
+
+.e-mail {
+    font-size: 0.8em;
+}
+
+
+/*------@MEDIA-SCREEN------*/
+/*Mediumskärmar: från 768px och upp)*/
+@media only screen and (min-width: 768px) {
+
+
+    /*------GENERAL------*/
+    .container {
+        width: 95%;
+        margin: auto;
+    }
+
+
+    /*------HEADER------*/
+    header {
+        height: 10vh;
+    }
+
+
+    /*------MAIN------*/
+    /*---Hero---*/
+    .hero h1{
+        font-size: 2.2rem;
+    }
+
+    .hero-header {
+        font-size: 1.4rem;
+    }
+
+
+    /*---Main-Articles---*/ 
+    /*sätter margin till hero-bilden*/
+    .main-articles {
+        margin-top: 1em; 
+    }
+
+    .main-article {
+        display: flex;
+    }
+
+    .article-image-wrapper {
+        width: 50%;
+    }
+
+    .article-image-wrapper img {
+        height: 100%;
+        object-fit: cover;
+        max-width: 100%;
+    }
+
+    .article-text {
+        width: 50%; 
+        padding-left: 0.8em;
+    }
+
+    .article-logo-wrapper{
+        width: 60%;
+    }
+
+    /*lägger padding åt höger istället på den artikel där texten och bilden bytt plats*/
+    #padding-article-text{
+        padding-left: 0em;
+        padding-right: 0.8em; 
+    }
+
+    .two-text-columns{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .two-text-columns article {
+        width: 50%; 
+    }
+
+    /*lägger padding åt vänster på artiklarna "Workspaces och "Stacking"*/
+    .two-text-columns article:nth-child(even){
+        padding-left: 0.9em; 
+    }
+
+    /*---Related-Articles---*/
+    .container-related-articles {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .heading-related-articles {
+        width: 100%;
+    }
+
+    .related-article {
+        width: 50%;
+        box-sizing: border-box; 
+    }
+}
+ 
+
+/*Stora skärmar från 992px och upp)*/
+@media only screen and (min-width: 992px) { 
+
+
+    /*------GENERAL------*/
+    h3 {
+        font-size: 1rem;
+    }
+
+    p, li {
+        font-size: 0.5rem;
+    }
+
+    .container {
+        width: 70%;
+        margin: auto;
+    }
+
+
+    /*------HEADER------*/
+    header {
+        height: 9vh;
+    }
+
+    .main-navigation {
+        display: none;
+    }
+
+    .main-navigation-widescreen {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        padding-top: 0.8em;
+        padding-right: 45%;
+        padding-left: 1em;
+    } 
+
+    .main-navigation-widescreen a {
+        font-size: 0.7em;
+    }
+
+    .site-logo-container {
+        height: 2em;
+        margin-left: 15%;
+        width: 150px; 
+    }
+
+    .site-logo-heading {
+        font-size: 1em;
+    }
+
+
+    /*------MAIN------*/
+    /*---Hero---*/
+    .hero-header {
+        font-size: 1.2rem;
+    }
+
+
+    /*---Main-Articles---*/ 
+    .main-articles {
+        margin-top: 0.8em;
+    }
+
+    .article-logo-heading {
+        font-size: 140%; 
+    }
+}
